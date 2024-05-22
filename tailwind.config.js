@@ -6,7 +6,15 @@ module.exports = {
     './public/index.html',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: 'var(--primary-color)',
+        secondary: 'var(--secondary-color)',
+        accent: 'var(--accent-color)',
+        background: 'var(--background-color)'
+      },
+      
+    },
   },
   plugins: [],
 }
