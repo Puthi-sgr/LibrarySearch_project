@@ -7,15 +7,22 @@ import { BrowserRouter,
         Router, 
         Routes, 
         Route} from 'react-router-dom';
+import { Home } from './page/Home';
+import { About } from './page/About'
+import { BookList } from './components/BookList';
+import { BookDetails } from './components/BookDetails';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <BrowserRouter>
-    <div className="bg-background">
-      HI 
-    </div>
+    <Routes>
+        <Route path = "/" element = {<Home />} />
+        <Route path = "/About" element = {<About />} />
+        <Route path = "/Book" element = {<BookList />} />
+        <Route path = "/Book/:id" element = {<BookDetails />} />
+    </Routes>
   </BrowserRouter>
 );
 

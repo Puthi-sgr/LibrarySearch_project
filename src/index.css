@@ -6,8 +6,60 @@
 
 :root {
     --background-color: #FFF5FF;
-    --primary-color: #591796;
-    --secondary-color: #9F87B0;
+    --primary-color: #EBE7E7;
+    --secondary-color: #591796;
     --accent-color: #E8D5B5;
     --text-color: #040316;
+    background-color: var(--background-color);
+}
+
+
+.header-content{
+    min-height: 75vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)),  url("img/Homepage.jpg") center/cover no-repeat;
+}
+
+.navbar-collapse{
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    color: var(--background-color);
+    background-color: var(--text-color);
+    height: 100%;
+    padding: 5rem 10rem 0 4rem;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+    /* transform: translateX(100%); */
+}
+
+.show-navbar-collapse{
+    transform: translateX(100%);
+}
+.nav-item{
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+    .navbar-toggler-btn{
+        display: none;
+    }
+    .navbar-collapse{
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        height: auto;
+        padding: 0 0 0 0;
+        background-color:var(--background-color);
+        color: var(--text-color);
+        
+    }
+    .navbar-nav{
+        display: flex;
+    }
+    .nav-item{
+        margin-top: 15px;
+        margin-left: 4rem;
+    
+    }
 }

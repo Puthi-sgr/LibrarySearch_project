@@ -13,6 +13,9 @@ module.exports = {
         accent: 'var(--accent-color)',
         background: 'var(--background-color)'
       },
+      fontFamily:{
+        poppins: ['Poppins', 'sans-serif']
+      }
       
     },
   },
