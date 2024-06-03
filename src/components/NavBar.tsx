@@ -26,10 +26,10 @@ export const NavBar = () => {
                         className="navbar-toggler-btn absolute top-5 right-8 z-10"
                         style={{marginLeft: "5rem"}}
                     >
-                        <RxHamburgerMenu className={toggleMenu ? "" : "text-white transition-all duration-300 ease-in-out "} />
+                        <RxHamburgerMenu className={toggleMenu ? "text-white transition-all duration-300 ease-in-out" : ""} />
                     </button>
                 </div>
-                <div className={toggleMenu ? "navbar-collapse show-navbar-collapse" : "navbar-collapse"}>
+                <div className={toggleMenu ? "navbar-collapse " : "navbar-collapse show-navbar-collapse"}>
                     <ul className = "navbar-nav">
                         <li className="nav-item">
                             <Link to="book">
