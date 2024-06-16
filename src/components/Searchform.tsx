@@ -17,7 +17,7 @@ export const SearchForm = () => {
             setSearchTerm("the lost world");
             setResultTitle("Enter your favorite book title ...");
         }else{
-            setSearchTerm(searchText?.current?.value ?? "")
+            setSearchTerm(searchText?.current?.value ?? "the lost world")
         }
 
         navigate('/book');
@@ -29,7 +29,7 @@ export const SearchForm = () => {
                     <form className="search-form" onSubmit={handleSubmit}>
                         <div className="search-form-element flex justify-between w-[650px] h-[42px]">
                             <input 
-
+                                ref={searchText}
                                 placeholder = "The king of cambodia........."
                                 type = "text" 
                                 className="w-[592px] h-[42px] rounded-md text-black pl-4" />

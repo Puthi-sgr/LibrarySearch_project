@@ -6,7 +6,7 @@ export const Header = () => {
     <div>
       <header>
         <NavBar />
-        <div className="flex justify-center">
+        <div className="flex justify-center holder">
           <div className="header-content w-[94%] rounded-md flex space-y-4 justify-center items-center flex-col text-white">
               <h2 className="font-bold text-4xl">Search your favorite book</h2>
               <p className="text-center max-w-3xl">

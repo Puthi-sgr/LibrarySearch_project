@@ -55,7 +55,7 @@ export const AppProvider: FC<{children : ReactNode}> = ({children} ) => {
 
                 setBooks(newBooks); //setting the array of books with book function that we have made in the above
 
-                if(newBooks.length() > 1){
+                if(newBooks.length > 1){
                     setResultTitle("This is your result");
                 }else{
                     setBooks([]); //if the function return less than 1 book, set the array of book into an empty array;
