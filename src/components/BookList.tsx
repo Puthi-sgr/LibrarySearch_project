@@ -25,7 +25,7 @@ export const BookList = () => {;
         <div className="section-title">
           <h2>{resultTitle}</h2>
         </div>
-        <div className="bookList-content-grid grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 space-x-7 space-y-5">
+        <div className="bookList-content-grid grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 space-x-7 space-y-10">
           {
             booksWithCovers.slice(0, 30).map((item : any, index : number) => {
               return (

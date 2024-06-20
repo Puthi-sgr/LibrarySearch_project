@@ -63,7 +63,7 @@ export const AppProvider: FC<{children : ReactNode}> = ({children} ) => {
                 }
                 setLoading(false);
             }
-            console.log(docs);
+           
         }catch(err){
             console.error(err);
         }                
