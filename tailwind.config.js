@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin');
 module.exports = {
   
   content: [
@@ -19,6 +20,39 @@ module.exports = {
       
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ addUtilities }) {
+      const newUtilities = {
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        '.scrollbar-hide::-webkit-scrollbar': {
+          display: 'none',
+        },
+
+        /* Scrollbar width for Firefox */
+        '.scrollbar-hide': {
+          scrollbarWidth: 'none', /* Firefox */
+          msOverflowStyle: 'none', /* IE and Edge */
+        },
+
+        /* Customize scrollbar for Chrome, Safari and Opera */
+        '.scrollbar-custom::-webkit-scrollbar': {
+          width: '12px',
+        },
+        '.scrollbar-custom::-webkit-scrollbar-track': {
+          borderRadius: '8px',
+          background: '#EBE7E7',
+        },
+        '.scrollbar-custom::-webkit-scrollbar-thumb': {
+          background: '#888',
+          borderRadius: '10px',
+        },
+        '.scrollbar-custom::-webkit-scrollbar-thumb:hover': {
+          background: '#555',
+        },
+      };
+
+      addUtilities(newUtilities);
+    }),
+  ],
 }
 

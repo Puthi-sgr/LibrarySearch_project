@@ -14,7 +14,7 @@ export const Book = (book:any) => {
       </div>
       <div className='book-item-info author'>
         <span className="font-bold">Author : </span>
-        <span className='opacity-60'>{book.author.join(", ")}</span>
+        <span className='opacity-60'>{book?.author?.join(", ") || "No author"}</span>
       </div>
       <div className='book-item-info edition'>
         <span>Total Editions : </span>
